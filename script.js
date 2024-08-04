@@ -79,7 +79,7 @@ function playGame() {
         console.log("Computer wins!")
     }
     else {
-        console.log("It's a tie")
+        console.log("The game ended in a tie")
     }
 }
 playGame()
