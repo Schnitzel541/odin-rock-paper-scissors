@@ -1,6 +1,9 @@
 const resultsDiv = document.querySelector("#results");
 const resultSpan = resultsDiv.firstElementChild;
 
+const humanScoreBoard = document.querySelector("#humanScore");
+const computerScoreBoard = document.querySelector("#computerScore");
+
 
 
 // Getting choices from either contestants
@@ -22,7 +25,11 @@ function getComputerChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+
+
 function playRound(humanChoice, computerChoice) {
+    humanScoreBoard.textContent = humanScore;
+    computerScoreBoard.textContent = computerScore;
 
         if (humanChoice == computerChoice) {
             resultSpan.textContent = "Tie!"
