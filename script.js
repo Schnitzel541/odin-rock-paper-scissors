@@ -6,11 +6,13 @@ const computerScoreBoard = document.querySelector("#computerScore");
 const winnerBoard = document.querySelector("#winner");
 const computerPick = document.querySelector("#computerPick");
 
-const possibleChoices = {
-  0: "✊",
-  1: "✋",
-  2: "✌️"
-}
+const winnerLoserPopup = document.querySelector(".alert-box");
+
+const finalText = document.querySelector("#finalText");
+const finalEmoji = document.querySelector("#finalEmoji");
+
+
+winnerLoserPopup.classList.add("display-none");
 
 // Getting choices from either contestants
 function getComputerChoice() {
@@ -35,7 +37,7 @@ function playRound(humanChoice, computerChoice) {
   winnerBoard.textContent = null;
   if (humanChoice == computerChoice) {
     resultSpan.textContent = "Tie!";
-    computerPick.textContent = possibleChoices[randomNumber];
+    computerPick.textContent = "👔";
 
 
   } else {
@@ -83,10 +85,17 @@ function playRound(humanChoice, computerChoice) {
     winnerBoard.textContent = "Human Wins!";
     humanScore = 0;
     computerScore = 0;
+    winnerLoserPopup.classList.remove("display-none");
+    finalText.textContent = "You Win!";
+    finalEmoji.textContent = "😊";
+
   } else if (computerScore === 5) {
     winnerBoard.textContent = "CPU Wins!";
     humanScore = 0;
     computerScore = 0;
+    winnerLoserPopup.classList.remove("display-none");
+    finalText.textContent = "You Lose!";
+    finalEmoji.textContent = "😔";
   }
 }
 
@@ -109,3 +118,11 @@ buttons.forEach((button) => {
     }
   });
 });
+
+function newGame() {
+  humanScore = 0;
+  computerScore = 0;
+  humanScoreBoard.textContent = humanScore;
+  computerScoreBoard.textContent = computerScore;
+  winnerLoserPopup.classList.add("display-none");
+}

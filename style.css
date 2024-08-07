@@ -51,6 +51,40 @@ body {
     background-color: rgb(179, 203, 255);
 }
 
+.alert-box {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border: solid black 1px;
+    position: fixed;
+    top: 34%;
+    left: 34%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.alert-box > h2 {
+    margin-top: 25px;
+}
+
+.alert-box > button {
+    margin-bottom: 25px;
+    border: solid pink;
+    font-size: larger;
+}
+.alert-box > button:hover {
+    background-color: rgb(112, 157, 255);
+}
+.alert-box > button:active {
+    background-color: rgb(179, 203, 255);
+}
+.display-none {
+    display: none;
+}
+
+
 @media screen and (max-width: 600px){
     #buttons {
         flex-direction: column;
