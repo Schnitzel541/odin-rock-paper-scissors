@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin | RPS</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="buttons">
-      <button id="rockButton">Rock</button>
-      <button id="paperButton">Paper</button>
-      <button id="scissorsButton">Scissors</button>
+      <button id="rockButton">✊</button>
+      <button id="paperButton">🤚</button>
+      <button id="scissorsButton">✌️</button>
+    </div>
+    <div id="versus">VS</div>
+    <div id="computerPick"></div>
+    <div id="score">
+      <p>Human Score: <span id="humanScore"></span></p>
+      <p>CPU Score: <span id="computerScore"></span></p>
     </div>
     <div id="results">
       <span id="spanResults"></span>
-    </div>
-    <div id="score">
-      <p>Human Score:<span id="humanScore"></span></p>
-      <p>CPU Score:<span id="computerScore"></span></p>
     </div>
     <div id="winner"></div>
     <script src="script.js"></script>
