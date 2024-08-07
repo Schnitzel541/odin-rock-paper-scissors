@@ -63,10 +63,12 @@ function playRound(humanChoice, computerChoice) {
                     else if (computerChoice === "paper") {
                         resultSpan.textContent = "You Win!"
                         humanScore++;
-                        
                     }
                     break;
-            }
+            
+                }
+                humanScoreBoard.textContent = humanScore;
+                computerScoreBoard.textContent = computerScore;
         }
     if (humanScore === 5) {
         winnerBoard.textContent = "Human Wins!"
