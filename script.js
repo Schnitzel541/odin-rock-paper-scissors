@@ -6,7 +6,11 @@ const computerScoreBoard = document.querySelector("#computerScore");
 const winnerBoard = document.querySelector("#winner");
 const computerPick = document.querySelector("#computerPick");
 
-
+const possibleChoices = {
+  0: "✊",
+  1: "✋",
+  2: "✌️"
+}
 
 // Getting choices from either contestants
 function getComputerChoice() {
@@ -31,7 +35,7 @@ function playRound(humanChoice, computerChoice) {
   winnerBoard.textContent = null;
   if (humanChoice == computerChoice) {
     resultSpan.textContent = "Tie!";
-    computerPick.textContent = "👔";
+    computerPick.textContent = possibleChoices[randomNumber];
 
 
   } else {
