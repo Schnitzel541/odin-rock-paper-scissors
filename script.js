@@ -4,6 +4,7 @@ const resultSpan = resultsDiv.firstElementChild;
 const humanScoreBoard = document.querySelector("#humanScore");
 const computerScoreBoard = document.querySelector("#computerScore");
 
+const winnerBoard = document.querySelector("#winner");
 
 
 // Getting choices from either contestants
@@ -25,12 +26,8 @@ function getComputerChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-
-
 function playRound(humanChoice, computerChoice) {
-    humanScoreBoard.textContent = humanScore;
-    computerScoreBoard.textContent = computerScore;
-
+    winnerBoard.textContent = null;
         if (humanChoice == computerChoice) {
             resultSpan.textContent = "Tie!"
         }
@@ -66,10 +63,21 @@ function playRound(humanChoice, computerChoice) {
                     else if (computerChoice === "paper") {
                         resultSpan.textContent = "You Win!"
                         humanScore++;
+                        
                     }
                     break;
             }
         }
+    if (humanScore === 5) {
+        winnerBoard.textContent = "Human Wins!"
+        humanScore = 0;
+        computerScore = 0;
+    }
+    else if (computerScore === 5) {
+        winnerBoard.textContent = "CPU Wins!"
+        humanScore  = 0;
+        computerScore = 0;
+    }
     }
 
 
