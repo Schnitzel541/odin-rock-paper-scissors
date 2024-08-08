@@ -88,6 +88,7 @@ function playRound(humanChoice, computerChoice) {
     winnerLoserPopup.classList.remove("display-none");
     finalText.textContent = "You Win!";
     finalEmoji.textContent = "😊";
+    computerPick.textContent = " ";
 
   } else if (computerScore === 5) {
     winnerBoard.textContent = "CPU Wins!";
@@ -96,6 +97,7 @@ function playRound(humanChoice, computerChoice) {
     winnerLoserPopup.classList.remove("display-none");
     finalText.textContent = "You Lose!";
     finalEmoji.textContent = "😔";
+    computerPick.textContent = " ";
   }
 }
 

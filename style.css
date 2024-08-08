@@ -52,18 +52,17 @@ body {
 }
 
 .alert-box {
+    margin-top: 15%;
     display: flex;
     flex-direction: column;
     width: 500px;
     height: 300px;
     background-color: rgb(255, 255, 255);
     border: solid black 1px;
-    position: fixed;
-    top: 34%;
-    left: 34%;
     text-align: center;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
 }
 .alert-box > h2 {
     margin-top: 25px;
@@ -83,7 +82,6 @@ body {
 .display-none {
     display: none;
 }
-
 
 @media screen and (max-width: 600px){
     #buttons {
